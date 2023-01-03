@@ -5,7 +5,7 @@ using namespace std;
 int binarySearch(int arr[], int l, int r, int x)
 {
 	if( r>=l ) {
-		int mid = 1 + (r+l)/2;
+		int mid = l + (r+l)/2;
 		
 		// If the element is present at the middle itself
 		if(arr[mid]==x)
