@@ -36,7 +36,5 @@ int main()
 	binarySearch(v, To_Find);
 	To_Find = 10;
 	binarySearch(v, To_Find);
-	
-	
-	
+	return 0;
 }
