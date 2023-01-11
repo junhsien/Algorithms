@@ -1,10 +1,14 @@
+// C program to find whether an array
+// is subset of another array
 #include <stdio.h>
 
 #define ARRAYSIZE(x) sizeof(x)/sizeof(x[0])
 
+/* Function prototypes */
 void quickSort(int *arr, int l, int r);
 int binarySearch(int arr[], int l, int r, int x);
 
+/* Return 1 if arr2[] is a subset of arr1[] */
 int isSubset(int *arr1, int *arr2, int m, int n)
 {
     int i=0;
@@ -14,8 +18,8 @@ int isSubset(int *arr1, int *arr2, int m, int n)
         if(binarySearch(arr1, 0, m-1, arr2[i])==-1)
             return 0;
     }
-    
-    return -1;
+    /* If we reach here then all elements of arr2[] are present in arr1[] */
+    return 1;
 }
 
 void exchange(int *a, int *b)
@@ -44,7 +48,7 @@ int partition(int *arr, int l, int r)
 
 void quickSort(int *arr, int l, int r)
 {
-    int index;
+    int index; /* Partitioning index */
     if(l<r){
         index = partition(arr, l ,r);
         quickSort(arr, l, index-1);
@@ -52,6 +56,7 @@ void quickSort(int *arr, int l, int r)
     }
 }
 
+/* Standard Binary Search function*/
 int binarySearch(int arr[], int l, int r, int x)
 {
     int mid;
