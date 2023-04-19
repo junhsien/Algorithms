@@ -1,4 +1,4 @@
-//https://www.geeksforgeeks.org/binary-representation-of-a-given-number/
+//https://www.geeksforgeeks.org/add-two-bit-strings/
 #include <iostream>
 using namespace std;
  
